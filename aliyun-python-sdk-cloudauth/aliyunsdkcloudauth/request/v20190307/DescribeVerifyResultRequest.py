@@ -36,12 +36,6 @@ class DescribeVerifyResultRequest(RpcRequest):
 	def set_BizType(self,BizType):
 		self.add_query_param('BizType',BizType)
 
-	def get_SourceIp(self):
-		return self.get_query_params().get('SourceIp')
-
-	def set_SourceIp(self,SourceIp):
-		self.add_query_param('SourceIp',SourceIp)
-
 	def get_BizId(self):
 		return self.get_query_params().get('BizId')
 

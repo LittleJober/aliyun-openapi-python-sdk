@@ -60,12 +60,6 @@ class DescribeDomainsRequest(RpcRequest):
 	def set_KeyWord(self,KeyWord):
 		self.add_query_param('KeyWord',KeyWord)
 
-	def get_Direction(self):
-		return self.get_query_params().get('Direction')
-
-	def set_Direction(self,Direction):
-		self.add_query_param('Direction',Direction)
-
 	def get_Starmark(self):
 		return self.get_query_params().get('Starmark')
 
@@ -77,18 +71,6 @@ class DescribeDomainsRequest(RpcRequest):
 
 	def set_GroupId(self,GroupId):
 		self.add_query_param('GroupId',GroupId)
-
-	def get_OrderBy(self):
-		return self.get_query_params().get('OrderBy')
-
-	def set_OrderBy(self,OrderBy):
-		self.add_query_param('OrderBy',OrderBy)
-
-	def get_UserClientIp(self):
-		return self.get_query_params().get('UserClientIp')
-
-	def set_UserClientIp(self,UserClientIp):
-		self.add_query_param('UserClientIp',UserClientIp)
 
 	def get_SearchMode(self):
 		return self.get_query_params().get('SearchMode')

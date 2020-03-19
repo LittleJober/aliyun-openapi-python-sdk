@@ -60,12 +60,6 @@ class DescribeInstanceAutoRenewalAttributeRequest(RpcRequest):
 	def set_DBInstanceId(self,DBInstanceId):
 		self.add_query_param('DBInstanceId',DBInstanceId)
 
-	def get_proxyId(self):
-		return self.get_query_params().get('proxyId')
-
-	def set_proxyId(self,proxyId):
-		self.add_query_param('proxyId',proxyId)
-
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
 

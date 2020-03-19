@@ -42,12 +42,6 @@ class ModifyAuditLogConfigRequest(RpcRequest):
 	def set_SecurityToken(self,SecurityToken):
 		self.add_query_param('SecurityToken',SecurityToken)
 
-	def get_AuditCommand(self):
-		return self.get_query_params().get('AuditCommand')
-
-	def set_AuditCommand(self,AuditCommand):
-		self.add_query_param('AuditCommand',AuditCommand)
-
 	def get_Retention(self):
 		return self.get_query_params().get('Retention')
 

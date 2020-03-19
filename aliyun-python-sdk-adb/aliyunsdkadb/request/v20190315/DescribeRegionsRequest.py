@@ -53,3 +53,9 @@ class DescribeRegionsRequest(RpcRequest):
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_AcceptLanguage(self):
+		return self.get_query_params().get('AcceptLanguage')
+
+	def set_AcceptLanguage(self,AcceptLanguage):
+		self.add_query_param('AcceptLanguage',AcceptLanguage)

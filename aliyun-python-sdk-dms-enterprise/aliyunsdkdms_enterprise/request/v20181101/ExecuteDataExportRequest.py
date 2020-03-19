@@ -23,7 +23,7 @@ from aliyunsdkdms_enterprise.endpoint import endpoint_data
 class ExecuteDataExportRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'dms-enterprise', '2018-11-01', 'ExecuteDataExport','dmsenterprise')
+		RpcRequest.__init__(self, 'dms-enterprise', '2018-11-01', 'ExecuteDataExport')
 		self.set_method('POST')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
@@ -42,12 +42,6 @@ class ExecuteDataExportRequest(RpcRequest):
 
 	def set_OrderId(self,OrderId):
 		self.add_query_param('OrderId',OrderId)
-
-	def get_ActionName(self):
-		return self.get_query_params().get('ActionName')
-
-	def set_ActionName(self,ActionName):
-		self.add_query_param('ActionName',ActionName)
 
 	def get_Tid(self):
 		return self.get_query_params().get('Tid')

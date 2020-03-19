@@ -1,3 +1,31 @@
+2020-03-10 Version: 1.15.8
+- Add EmotionConfidence to GetImage.
+
+2020-03-09 Version: 1.15.8
+- Add EmotionConfidence to GetImage.
+
+2020-03-09 Version: 1.15.8
+- Add EmotionConfidence to GetImage.
+
+2020-03-09 Version: 1.15.8
+- Add EmotionConfidence to GetImage.
+
+2020-03-09 Version: 1.15.8
+- Add EmotionConfidence to GetImage.
+
+2020-02-10 Version: 1.15.7
+- Supported address for GetMediaMeta.
+
+2020-02-05 Version: 1.15.6
+- Supported GetOfficePreviewURL.
+- Supported RefreshOfficePreviewToken.
+
+2020-01-08 Version: 1.15.5
+- Add TagLevel to ListSetTags.
+
+2019-12-31 Version: 1.15.4
+- Supported image for process.
+
 2019-11-28 Version: 1.15.3
 - Supported dash for compress.
 

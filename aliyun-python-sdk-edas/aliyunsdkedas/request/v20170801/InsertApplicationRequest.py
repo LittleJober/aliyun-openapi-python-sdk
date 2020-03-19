@@ -23,7 +23,7 @@ from aliyunsdkedas.endpoint import endpoint_data
 class InsertApplicationRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Edas', '2017-08-01', 'InsertApplication','edas')
+		RoaRequest.__init__(self, 'Edas', '2017-08-01', 'InsertApplication','Edas')
 		self.set_uri_pattern('/pop/v5/changeorder/co_create_app')
 		self.set_method('POST')
 		if hasattr(self, "endpoint_map"):
@@ -49,6 +49,12 @@ class InsertApplicationRequest(RoaRequest):
 
 	def set_BuildPackId(self,BuildPackId):
 		self.add_query_param('BuildPackId',BuildPackId)
+
+	def get_ComponentIds(self):
+		return self.get_query_params().get('ComponentIds')
+
+	def set_ComponentIds(self,ComponentIds):
+		self.add_query_param('ComponentIds',ComponentIds)
 
 	def get_HealthCheckURL(self):
 		return self.get_query_params().get('HealthCheckURL')

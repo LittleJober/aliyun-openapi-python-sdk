@@ -72,12 +72,6 @@ class DescribeRunningLogRecordsRequest(RpcRequest):
 	def set_NodeId(self,NodeId):
 		self.add_query_param('NodeId',NodeId)
 
-	def get_SQLId(self):
-		return self.get_query_params().get('SQLId')
-
-	def set_SQLId(self,SQLId):
-		self.add_query_param('SQLId',SQLId)
-
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
 

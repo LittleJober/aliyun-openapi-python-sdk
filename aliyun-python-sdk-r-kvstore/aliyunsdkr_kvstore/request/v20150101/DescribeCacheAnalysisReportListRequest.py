@@ -30,12 +30,6 @@ class DescribeCacheAnalysisReportListRequest(RpcRequest):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
 
-	def get_Date(self):
-		return self.get_query_params().get('Date')
-
-	def set_Date(self,Date):
-		self.add_query_param('Date',Date)
-
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 

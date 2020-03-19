@@ -47,9 +47,3 @@ class DescribeVerifyUsageRequest(RpcRequest):
 
 	def set_EndDate(self,EndDate):
 		self.add_query_param('EndDate',EndDate)
-
-	def get_SourceIp(self):
-		return self.get_query_params().get('SourceIp')
-
-	def set_SourceIp(self,SourceIp):
-		self.add_query_param('SourceIp',SourceIp)

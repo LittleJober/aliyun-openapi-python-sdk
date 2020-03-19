@@ -1,3 +1,17 @@
+2020-03-11 Version: 1.8.0
+- Supported ondemand record.
+- Supported ivision template binding.
+
+2020-02-18 Version: 1.7.0
+- Supported customized params in device apis.
+
+2020-01-13 Version: 1.6.1
+- Supported ondemand start transfer stream.
+
+2020-01-09 Version: 1.6.0
+- Supported ondemand transfer stream.
+- Supported device position.
+
 2019-11-22 Version: 1.5.0
 - Supported ondemand snapshot.
 

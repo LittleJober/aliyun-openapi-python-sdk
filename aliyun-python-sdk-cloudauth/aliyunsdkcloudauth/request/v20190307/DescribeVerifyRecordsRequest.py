@@ -42,12 +42,6 @@ class DescribeVerifyRecordsRequest(RpcRequest):
 	def set_StartDate(self,StartDate):
 		self.add_query_param('StartDate',StartDate)
 
-	def get_SourceIp(self):
-		return self.get_query_params().get('SourceIp')
-
-	def set_SourceIp(self,SourceIp):
-		self.add_query_param('SourceIp',SourceIp)
-
 	def get_PageSize(self):
 		return self.get_query_params().get('PageSize')
 

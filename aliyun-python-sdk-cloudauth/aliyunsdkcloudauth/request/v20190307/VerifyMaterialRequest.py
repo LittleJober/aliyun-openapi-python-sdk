@@ -42,12 +42,6 @@ class VerifyMaterialRequest(RpcRequest):
 	def set_UserId(self,UserId):
 		self.add_query_param('UserId',UserId)
 
-	def get_SourceIp(self):
-		return self.get_query_params().get('SourceIp')
-
-	def set_SourceIp(self,SourceIp):
-		self.add_query_param('SourceIp',SourceIp)
-
 	def get_IdCardBackImageUrl(self):
 		return self.get_query_params().get('IdCardBackImageUrl')
 

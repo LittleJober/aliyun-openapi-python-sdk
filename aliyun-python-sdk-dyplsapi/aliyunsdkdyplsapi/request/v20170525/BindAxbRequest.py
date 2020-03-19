@@ -113,3 +113,9 @@ class BindAxbRequest(RpcRequest):
 
 	def set_OutId(self,OutId):
 		self.add_query_param('OutId',OutId)
+
+	def get_CallRestrict(self):
+		return self.get_query_params().get('CallRestrict')
+
+	def set_CallRestrict(self,CallRestrict):
+		self.add_query_param('CallRestrict',CallRestrict)

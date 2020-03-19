@@ -23,18 +23,12 @@ from aliyunsdkiot.endpoint import endpoint_data
 class QueryEdgeInstanceRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Iot', '2018-01-20', 'QueryEdgeInstance','iot')
+		RpcRequest.__init__(self, 'Iot', '2018-01-20', 'QueryEdgeInstance','Iot')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
-
-	def get_CurrentPage(self):
-		return self.get_query_params().get('CurrentPage')
-
-	def set_CurrentPage(self,CurrentPage):
-		self.add_query_param('CurrentPage',CurrentPage)
 
 	def get_IotInstanceId(self):
 		return self.get_query_params().get('IotInstanceId')
@@ -47,6 +41,12 @@ class QueryEdgeInstanceRequest(RpcRequest):
 
 	def set_PageSize(self,PageSize):
 		self.add_query_param('PageSize',PageSize)
+
+	def get_CurrentPage(self):
+		return self.get_query_params().get('CurrentPage')
+
+	def set_CurrentPage(self,CurrentPage):
+		self.add_query_param('CurrentPage',CurrentPage)
 
 	def get_Name(self):
 		return self.get_query_params().get('Name')

@@ -48,20 +48,8 @@ class CreateAuthKeyRequest(RpcRequest):
 	def set_BizType(self,BizType):
 		self.add_query_param('BizType',BizType)
 
-	def get_SourceIp(self):
-		return self.get_query_params().get('SourceIp')
-
-	def set_SourceIp(self,SourceIp):
-		self.add_query_param('SourceIp',SourceIp)
-
 	def get_AuthYears(self):
 		return self.get_query_params().get('AuthYears')
 
 	def set_AuthYears(self,AuthYears):
 		self.add_query_param('AuthYears',AuthYears)
-
-	def get_Lang(self):
-		return self.get_query_params().get('Lang')
-
-	def set_Lang(self,Lang):
-		self.add_query_param('Lang',Lang)

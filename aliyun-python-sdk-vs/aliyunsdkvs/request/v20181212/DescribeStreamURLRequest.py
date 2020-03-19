@@ -54,17 +54,17 @@ class DescribeStreamURLRequest(RpcRequest):
 	def set_Type(self,Type):
 		self.add_query_param('Type',Type)
 
+	def get_OutHostType(self):
+		return self.get_query_params().get('OutHostType')
+
+	def set_OutHostType(self,OutHostType):
+		self.add_query_param('OutHostType',OutHostType)
+
 	def get_Id(self):
 		return self.get_query_params().get('Id')
 
 	def set_Id(self,Id):
 		self.add_query_param('Id',Id)
-
-	def get_ShowLog(self):
-		return self.get_query_params().get('ShowLog')
-
-	def set_ShowLog(self,ShowLog):
-		self.add_query_param('ShowLog',ShowLog)
 
 	def get_OutProtocol(self):
 		return self.get_query_params().get('OutProtocol')

@@ -23,12 +23,18 @@ from aliyunsdkhbase.endpoint import endpoint_data
 class DescribeInstancesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'HBase', '2019-01-01', 'DescribeInstances','hbase')
+		RpcRequest.__init__(self, 'HBase', '2019-01-01', 'DescribeInstances')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
+
+	def get_ClusterName(self):
+		return self.get_query_params().get('ClusterName')
+
+	def set_ClusterName(self,ClusterName):
+		self.add_query_param('ClusterName',ClusterName)
 
 	def get_PageNumber(self):
 		return self.get_query_params().get('PageNumber')
@@ -41,3 +47,20 @@ class DescribeInstancesRequest(RpcRequest):
 
 	def set_PageSize(self,PageSize):
 		self.add_query_param('PageSize',PageSize)
+
+	def get_Tags(self):
+		return self.get_query_params().get('Tags')
+
+	def set_Tags(self,Tags):
+		for i in range(len(Tags)):	
+			if Tags[i].get('Value') is not None:
+				self.add_query_param('Tag.' + str(i + 1) + '.Value' , Tags[i].get('Value'))
+			if Tags[i].get('Key') is not None:
+				self.add_query_param('Tag.' + str(i + 1) + '.Key' , Tags[i].get('Key'))
+
+
+	def get_DbType(self):
+		return self.get_query_params().get('DbType')
+
+	def set_DbType(self,DbType):
+		self.add_query_param('DbType',DbType)

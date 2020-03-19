@@ -66,12 +66,6 @@ class CreateDBClusterRequest(RpcRequest):
 	def set_DBNodeClass(self,DBNodeClass):
 		self.add_query_param('DBNodeClass',DBNodeClass)
 
-	def get_Engine(self):
-		return self.get_query_params().get('Engine')
-
-	def set_Engine(self,Engine):
-		self.add_query_param('Engine',Engine)
-
 	def get_CreationOption(self):
 		return self.get_query_params().get('CreationOption')
 
@@ -119,6 +113,12 @@ class CreateDBClusterRequest(RpcRequest):
 
 	def set_VSwitchId(self,VSwitchId):
 		self.add_query_param('VSwitchId',VSwitchId)
+
+	def get_SecurityIPList(self):
+		return self.get_query_params().get('SecurityIPList')
+
+	def set_SecurityIPList(self,SecurityIPList):
+		self.add_query_param('SecurityIPList',SecurityIPList)
 
 	def get_AutoRenew(self):
 		return self.get_query_params().get('AutoRenew')

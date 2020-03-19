@@ -1,3 +1,23 @@
+2020-03-06 Version: 8.7.0
+- Add LinkIoTEdge CreateEdgeOssPreSignedAddress API.
+
+2020-03-05 Version: 8.6.0
+- Add CreateEdgeDriver, DeleteEdgeDriver, BatchGetEdgeDriver, QueryEdgeDriver, CreateEdgeDriverVersion, DeleteEdgeDriverVersion, UpdateEdgeDriverVersion, GetEdgeDriverVersion, QueryEdgeDriverVersion API.
+- Add ResetThing API, support reset thing topo and 
+
+2020-02-11 Version: 8.5.0
+- Add Thing Model APIs, including CreateThingModel, UpdateThingModel, etc.
+- Add OTA API ListOTATaskByJob.
+- Update OTA API ListOTAJobByFirmware.
+- Update Thing Core Model API InvokeThingsService.
+
+2020-01-20 Version: 8.4.0
+- Add Thing Model APIs, including QueryThingModel, PublishThingModel, etc.
+
+2019-12-31 Version: 8.3.0
+- Add OTA APIs, including GenerateOTAUploadURL, CreateOTAFirmware, etc.
+- Add UpdateProductFilterConfig interface, support setting product filter config.
+
 2019-12-11 Version: 8.2.0
 - Add api `BatchAddThingTopo`, support add multiple sub-devices for a gateway.
 - Add api `QueryDeviceByStatus`, support query device list by device status.

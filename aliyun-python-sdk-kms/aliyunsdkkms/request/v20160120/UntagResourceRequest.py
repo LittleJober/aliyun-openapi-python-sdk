@@ -42,3 +42,9 @@ class UntagResourceRequest(RpcRequest):
 
 	def set_KeyId(self,KeyId):
 		self.add_query_param('KeyId',KeyId)
+
+	def get_SecretName(self):
+		return self.get_query_params().get('SecretName')
+
+	def set_SecretName(self,SecretName):
+		self.add_query_param('SecretName',SecretName)

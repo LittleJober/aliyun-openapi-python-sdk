@@ -42,12 +42,6 @@ class CreateVerifySettingRequest(RpcRequest):
 	def set_ResultStep(self,ResultStep):
 		self.add_query_param('ResultStep',ResultStep)
 
-	def get_SourceIp(self):
-		return self.get_query_params().get('SourceIp')
-
-	def set_SourceIp(self,SourceIp):
-		self.add_query_param('SourceIp',SourceIp)
-
 	def get_Solution(self):
 		return self.get_query_params().get('Solution')
 

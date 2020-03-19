@@ -36,6 +36,12 @@ class ModifyDeviceRequest(RpcRequest):
 	def set_GbId(self,GbId):
 		self.add_query_param('GbId',GbId)
 
+	def get_Latitude(self):
+		return self.get_query_params().get('Latitude')
+
+	def set_Latitude(self,Latitude):
+		self.add_query_param('Latitude',Latitude)
+
 	def get_Description(self):
 		return self.get_query_params().get('Description')
 
@@ -84,11 +90,11 @@ class ModifyDeviceRequest(RpcRequest):
 	def set_Id(self,Id):
 		self.add_query_param('Id',Id)
 
-	def get_ShowLog(self):
-		return self.get_query_params().get('ShowLog')
+	def get_Longitude(self):
+		return self.get_query_params().get('Longitude')
 
-	def set_ShowLog(self,ShowLog):
-		self.add_query_param('ShowLog',ShowLog)
+	def set_Longitude(self,Longitude):
+		self.add_query_param('Longitude',Longitude)
 
 	def get_GroupId(self):
 		return self.get_query_params().get('GroupId')
@@ -108,6 +114,12 @@ class ModifyDeviceRequest(RpcRequest):
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
+	def get_Params(self):
+		return self.get_query_params().get('Params')
+
+	def set_Params(self,Params):
+		self.add_query_param('Params',Params)
+
 	def get_Url(self):
 		return self.get_query_params().get('Url')
 
@@ -126,8 +138,20 @@ class ModifyDeviceRequest(RpcRequest):
 	def set_Name(self,Name):
 		self.add_query_param('Name',Name)
 
+	def get_PosInterval(self):
+		return self.get_query_params().get('PosInterval')
+
+	def set_PosInterval(self,PosInterval):
+		self.add_query_param('PosInterval',PosInterval)
+
 	def get_Username(self):
 		return self.get_query_params().get('Username')
 
 	def set_Username(self,Username):
 		self.add_query_param('Username',Username)
+
+	def get_AutoPos(self):
+		return self.get_query_params().get('AutoPos')
+
+	def set_AutoPos(self,AutoPos):
+		self.add_query_param('AutoPos',AutoPos)

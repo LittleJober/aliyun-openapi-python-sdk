@@ -137,12 +137,6 @@ class DescribeInstancesRequest(RpcRequest):
 	def set_VSwitchId(self,VSwitchId):
 		self.add_query_param('VSwitchId',VSwitchId)
 
-	def get_VpcCloudInsInfo(self):
-		return self.get_query_params().get('VpcCloudInsInfo')
-
-	def set_VpcCloudInsInfo(self,VpcCloudInsInfo):
-		self.add_query_param('VpcCloudInsInfo',VpcCloudInsInfo)
-
 	def get_InstanceIds(self):
 		return self.get_query_params().get('InstanceIds')
 

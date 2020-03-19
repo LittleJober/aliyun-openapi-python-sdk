@@ -1,3 +1,22 @@
+2020-02-25 Version: 1.7.0
+- Fix ListWorkFlowTemplates, ListWorkFlowNodes API Go SDK build error.
+
+2020-02-15 Version: 1.6.0
+- Supported ListWorkFlowTemplates, ListWorkFlowNodes API.
+
+2020-02-13 Version: 1.5.2
+- Fix GetDataCorrectOrderDetail API return empty database information.
+
+2020-01-15 Version: 1.5.1
+- Fix SignatureDoesNotMatch issue of GetOrderBaseInfo API.
+
+2019-12-20 Version: 1.5.0
+- Supported Authorization API, includes GrantUserPermission, RevokeUserPermission, ListDatabaseUserPermssions, ListUserPermissions.
+- Supported Database or Table Metadata synchronization API, includes SyncInstanceMeta, SyncDatabaseMeta.
+- Supported Database or Table Owner set up API.
+- Supported GetUser API to get information of one DMS user.
+- Supported set Dingding mobile number with RegisterUser API.
+
 2019-11-28 Version: 1.4.0
 - Support Order Basis API, include CreateOrder, CloseOrder, ListOrders, GetOrderBaseInfo.
 - Support Order Approval API, include SubmitOrderApproval, ApproveOrder, GetApprovalDetail.

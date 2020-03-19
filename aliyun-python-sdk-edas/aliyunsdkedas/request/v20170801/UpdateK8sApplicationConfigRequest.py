@@ -23,7 +23,7 @@ from aliyunsdkedas.endpoint import endpoint_data
 class UpdateK8sApplicationConfigRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Edas', '2017-08-01', 'UpdateK8sApplicationConfig','edas')
+		RoaRequest.__init__(self, 'Edas', '2017-08-01', 'UpdateK8sApplicationConfig','Edas')
 		self.set_uri_pattern('/pop/v5/k8s/acs/k8s_app_configuration')
 		self.set_method('PUT')
 		if hasattr(self, "endpoint_map"):
@@ -55,3 +55,9 @@ class UpdateK8sApplicationConfigRequest(RoaRequest):
 
 	def set_CpuLimit(self,CpuLimit):
 		self.add_query_param('CpuLimit',CpuLimit)
+
+	def get_McpuLimit(self):
+		return self.get_query_params().get('McpuLimit')
+
+	def set_McpuLimit(self,McpuLimit):
+		self.add_query_param('McpuLimit',McpuLimit)

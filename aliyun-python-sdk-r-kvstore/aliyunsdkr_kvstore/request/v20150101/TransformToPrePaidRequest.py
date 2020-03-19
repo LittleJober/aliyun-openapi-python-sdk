@@ -54,12 +54,6 @@ class TransformToPrePaidRequest(RpcRequest):
 	def set_AutoPay(self,AutoPay):
 		self.add_query_param('AutoPay',AutoPay)
 
-	def get_FromApp(self):
-		return self.get_query_params().get('FromApp')
-
-	def set_FromApp(self,FromApp):
-		self.add_query_param('FromApp',FromApp)
-
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
 

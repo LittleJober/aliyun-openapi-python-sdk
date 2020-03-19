@@ -84,12 +84,6 @@ class CreateTemplateRequest(RpcRequest):
 	def set_Retention(self,Retention):
 		self.add_query_param('Retention',Retention)
 
-	def get_ShowLog(self):
-		return self.get_query_params().get('ShowLog')
-
-	def set_ShowLog(self,ShowLog):
-		self.add_query_param('ShowLog',ShowLog)
-
 	def get_HlsM3u8(self):
 		return self.get_query_params().get('HlsM3u8')
 
@@ -113,6 +107,12 @@ class CreateTemplateRequest(RpcRequest):
 
 	def set_EndTime(self,EndTime):
 		self.add_query_param('EndTime',EndTime)
+
+	def get_Trigger(self):
+		return self.get_query_params().get('Trigger')
+
+	def set_Trigger(self,Trigger):
+		self.add_query_param('Trigger',Trigger)
 
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')

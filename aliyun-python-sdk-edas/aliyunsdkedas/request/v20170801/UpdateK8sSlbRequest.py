@@ -23,7 +23,7 @@ from aliyunsdkedas.endpoint import endpoint_data
 class UpdateK8sSlbRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Edas', '2017-08-01', 'UpdateK8sSlb','edas')
+		RoaRequest.__init__(self, 'Edas', '2017-08-01', 'UpdateK8sSlb','Edas')
 		self.set_uri_pattern('/pop/v5/k8s/acs/k8s_slb_binding')
 		self.set_method('PUT')
 		if hasattr(self, "endpoint_map"):
@@ -31,6 +31,12 @@ class UpdateK8sSlbRequest(RoaRequest):
 		if hasattr(self, "endpoint_regional"):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
+
+	def get_ServicePortInfos(self):
+		return self.get_query_params().get('ServicePortInfos')
+
+	def set_ServicePortInfos(self,ServicePortInfos):
+		self.add_query_param('ServicePortInfos',ServicePortInfos)
 
 	def get_SlbProtocol(self):
 		return self.get_query_params().get('SlbProtocol')

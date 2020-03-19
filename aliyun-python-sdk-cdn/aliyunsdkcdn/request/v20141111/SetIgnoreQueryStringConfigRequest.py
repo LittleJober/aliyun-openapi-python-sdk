@@ -30,6 +30,18 @@ class SetIgnoreQueryStringConfigRequest(RpcRequest):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
 
+	def get_SecurityToken(self):
+		return self.get_query_params().get('SecurityToken')
+
+	def set_SecurityToken(self,SecurityToken):
+		self.add_query_param('SecurityToken',SecurityToken)
+
+	def get_Enable(self):
+		return self.get_query_params().get('Enable')
+
+	def set_Enable(self,Enable):
+		self.add_query_param('Enable',Enable)
+
 	def get_KeepOssArgs(self):
 		return self.get_query_params().get('KeepOssArgs')
 
@@ -53,15 +65,3 @@ class SetIgnoreQueryStringConfigRequest(RpcRequest):
 
 	def set_HashKeyArgs(self,HashKeyArgs):
 		self.add_query_param('HashKeyArgs',HashKeyArgs)
-
-	def get_SecurityToken(self):
-		return self.get_query_params().get('SecurityToken')
-
-	def set_SecurityToken(self,SecurityToken):
-		self.add_query_param('SecurityToken',SecurityToken)
-
-	def get_Enable(self):
-		return self.get_query_params().get('Enable')
-
-	def set_Enable(self,Enable):
-		self.add_query_param('Enable',Enable)

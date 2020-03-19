@@ -23,7 +23,7 @@ from aliyunsdkiot.endpoint import endpoint_data
 class CreateProductRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Iot', '2018-01-20', 'CreateProduct','iot')
+		RpcRequest.__init__(self, 'Iot', '2018-01-20', 'CreateProduct','Iot')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
@@ -41,6 +41,12 @@ class CreateProductRequest(RpcRequest):
 
 	def set_Description(self,Description):
 		self.add_query_param('Description',Description)
+
+	def get_CategoryKey(self):
+		return self.get_query_params().get('CategoryKey')
+
+	def set_CategoryKey(self,CategoryKey):
+		self.add_query_param('CategoryKey',CategoryKey)
 
 	def get_JoinPermissionId(self):
 		return self.get_query_params().get('JoinPermissionId')
@@ -77,6 +83,12 @@ class CreateProductRequest(RpcRequest):
 
 	def set_AliyunCommodityCode(self,AliyunCommodityCode):
 		self.add_query_param('AliyunCommodityCode',AliyunCommodityCode)
+
+	def get_PublishAuto(self):
+		return self.get_query_params().get('PublishAuto')
+
+	def set_PublishAuto(self,PublishAuto):
+		self.add_query_param('PublishAuto',PublishAuto)
 
 	def get_CategoryId(self):
 		return self.get_query_params().get('CategoryId')

@@ -1,3 +1,12 @@
+2020-03-16 Version: 2.0.5
+- DescribeFaceVerify API Return DeviceToken Field.
+
+2020-02-26 Version: 2.0.4
+- Add InitFaceVerify and DescribeFaceVerify API.
+
+2020-01-16 Version: 2.0.2
+- Add fields faceComparisonScore for DescribeVerifyResult and VerifyMaterials interface.
+
 2019-10-30 Version: 2.0.1
 - Update interface params of the cloudauth.
 

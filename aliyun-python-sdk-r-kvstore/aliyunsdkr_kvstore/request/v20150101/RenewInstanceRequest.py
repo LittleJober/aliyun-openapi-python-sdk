@@ -107,9 +107,3 @@ class RenewInstanceRequest(RpcRequest):
 
 	def set_InstanceId(self,InstanceId):
 		self.add_query_param('InstanceId',InstanceId)
-
-	def get_ForceUpgrade(self):
-		return self.get_query_params().get('ForceUpgrade')
-
-	def set_ForceUpgrade(self,ForceUpgrade):
-		self.add_query_param('ForceUpgrade',ForceUpgrade)

@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,17 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+from aliyunsdkehpc.endpoint import endpoint_data
+
 class UpdateClusterVolumesRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'EHPC', '2018-04-12', 'UpdateClusterVolumes','ehs')
+		if hasattr(self, "endpoint_map"):
+			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+		if hasattr(self, "endpoint_regional"):
+			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+
 
 	def get_AdditionalVolumess(self):
 		return self.get_query_params().get('AdditionalVolumess')
@@ -38,7 +45,8 @@ class UpdateClusterVolumesRequest(RpcRequest):
 				self.add_query_param('AdditionalVolumes.' + str(i + 1) + '.RemoteDirectory' , AdditionalVolumess[i].get('RemoteDirectory'))
 			for j in range(len(AdditionalVolumess[i].get('Roless'))):
 				if AdditionalVolumess[i].get('Roless')[j] is not None:
-					self.add_query_param('AdditionalVolumes.' + str(i + 1) + '.Roles.'+str(j + 1), AdditionalVolumess[i].get('Roless')[j])
+					if AdditionalVolumess[i].get('Roless')[j].get('Name') is not None:
+						self.add_query_param('AdditionalVolumes.' + str(i + 1) + '.Roles.'+str(j + 1)+ '.Name', AdditionalVolumess[i].get('Roless')[j].get('Name'))
 			if AdditionalVolumess[i].get('VolumeId') is not None:
 				self.add_query_param('AdditionalVolumes.' + str(i + 1) + '.VolumeId' , AdditionalVolumess[i].get('VolumeId'))
 			if AdditionalVolumess[i].get('VolumeMountpoint') is not None:
