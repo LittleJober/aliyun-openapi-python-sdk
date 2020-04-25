@@ -37,16 +37,22 @@ class InitFaceVerifyRequest(RpcRequest):
 		self.add_query_param('ProductCode',ProductCode)
 
 	def get_FaceContrastPicture(self):
-		return self.get_query_params().get('FaceContrastPicture')
+		return self.get_body_params().get('FaceContrastPicture')
 
 	def set_FaceContrastPicture(self,FaceContrastPicture):
-		self.add_query_param('FaceContrastPicture',FaceContrastPicture)
+		self.add_body_params('FaceContrastPicture', FaceContrastPicture)
 
-	def get_CertName(self):
-		return self.get_query_params().get('CertName')
+	def get_UserId(self):
+		return self.get_query_params().get('UserId')
 
-	def set_CertName(self,CertName):
-		self.add_query_param('CertName',CertName)
+	def set_UserId(self,UserId):
+		self.add_query_param('UserId',UserId)
+
+	def get_CertifyId(self):
+		return self.get_query_params().get('CertifyId')
+
+	def set_CertifyId(self,CertifyId):
+		self.add_query_param('CertifyId',CertifyId)
 
 	def get_CertNo(self):
 		return self.get_query_params().get('CertNo')
@@ -66,20 +72,56 @@ class InitFaceVerifyRequest(RpcRequest):
 	def set_CertType(self,CertType):
 		self.add_query_param('CertType',CertType)
 
-	def get_SceneId(self):
-		return self.get_query_params().get('SceneId')
+	def get_FaceContrastPictureUrl(self):
+		return self.get_query_params().get('FaceContrastPictureUrl')
 
-	def set_SceneId(self,SceneId):
-		self.add_query_param('SceneId',SceneId)
-
-	def get_ReturnUrl(self):
-		return self.get_query_params().get('ReturnUrl')
-
-	def set_ReturnUrl(self,ReturnUrl):
-		self.add_query_param('ReturnUrl',ReturnUrl)
+	def set_FaceContrastPictureUrl(self,FaceContrastPictureUrl):
+		self.add_query_param('FaceContrastPictureUrl',FaceContrastPictureUrl)
 
 	def get_MetaInfo(self):
 		return self.get_query_params().get('MetaInfo')
 
 	def set_MetaInfo(self,MetaInfo):
 		self.add_query_param('MetaInfo',MetaInfo)
+
+	def get_OssObjectName(self):
+		return self.get_query_params().get('OssObjectName')
+
+	def set_OssObjectName(self,OssObjectName):
+		self.add_query_param('OssObjectName',OssObjectName)
+
+	def get_CertName(self):
+		return self.get_query_params().get('CertName')
+
+	def set_CertName(self,CertName):
+		self.add_query_param('CertName',CertName)
+
+	def get_Ip(self):
+		return self.get_query_params().get('Ip')
+
+	def set_Ip(self,Ip):
+		self.add_query_param('Ip',Ip)
+
+	def get_Mobile(self):
+		return self.get_query_params().get('Mobile')
+
+	def set_Mobile(self,Mobile):
+		self.add_query_param('Mobile',Mobile)
+
+	def get_SceneId(self):
+		return self.get_query_params().get('SceneId')
+
+	def set_SceneId(self,SceneId):
+		self.add_query_param('SceneId',SceneId)
+
+	def get_OssBucketName(self):
+		return self.get_query_params().get('OssBucketName')
+
+	def set_OssBucketName(self,OssBucketName):
+		self.add_query_param('OssBucketName',OssBucketName)
+
+	def get_ReturnUrl(self):
+		return self.get_query_params().get('ReturnUrl')
+
+	def set_ReturnUrl(self,ReturnUrl):
+		self.add_query_param('ReturnUrl',ReturnUrl)

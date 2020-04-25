@@ -42,6 +42,12 @@ class ModifyAutoRenewAttributeRequest(RpcRequest):
 	def set_Duration(self,Duration):
 		self.add_query_param('Duration',Duration)
 
+	def get_ResourceGroupId(self):
+		return self.get_query_params().get('ResourceGroupId')
+
+	def set_ResourceGroupId(self,ResourceGroupId):
+		self.add_query_param('ResourceGroupId',ResourceGroupId)
+
 	def get_RenewalStatus(self):
 		return self.get_query_params().get('RenewalStatus')
 

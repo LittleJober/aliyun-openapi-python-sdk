@@ -72,6 +72,12 @@ class DescribeAvailableResourceRequest(RpcRequest):
 	def set_ZoneId(self,ZoneId):
 		self.add_query_param('ZoneId',ZoneId)
 
+	def get_Category(self):
+		return self.get_query_params().get('Category')
+
+	def set_Category(self,Category):
+		self.add_query_param('Category',Category)
+
 	def get_OrderType(self):
 		return self.get_query_params().get('OrderType')
 

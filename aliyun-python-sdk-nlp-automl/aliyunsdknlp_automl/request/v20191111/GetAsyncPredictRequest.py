@@ -24,6 +24,7 @@ class GetAsyncPredictRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'nlp-automl', '2019-11-11', 'GetAsyncPredict','nlpautoml')
+		self.set_method('GET')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):

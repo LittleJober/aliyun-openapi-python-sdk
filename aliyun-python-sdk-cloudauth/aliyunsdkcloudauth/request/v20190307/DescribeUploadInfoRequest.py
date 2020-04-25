@@ -28,3 +28,10 @@ class DescribeUploadInfoRequest(RpcRequest):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+
+
+	def get_Biz(self):
+		return self.get_query_params().get('Biz')
+
+	def set_Biz(self,Biz):
+		self.add_query_param('Biz',Biz)

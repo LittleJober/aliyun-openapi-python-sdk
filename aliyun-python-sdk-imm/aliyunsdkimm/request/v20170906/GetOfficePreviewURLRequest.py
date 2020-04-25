@@ -36,11 +36,11 @@ class GetOfficePreviewURLRequest(RpcRequest):
 	def set_Project(self,Project):
 		self.add_query_param('Project',Project)
 
-	def get_UseHTTPS(self):
-		return self.get_query_params().get('UseHTTPS')
+	def get_UseOldURL(self):
+		return self.get_query_params().get('UseOldURL')
 
-	def set_UseHTTPS(self,UseHTTPS):
-		self.add_query_param('UseHTTPS',UseHTTPS)
+	def set_UseOldURL(self,UseOldURL):
+		self.add_query_param('UseOldURL',UseOldURL)
 
 	def get_SrcUri(self):
 		return self.get_query_params().get('SrcUri')

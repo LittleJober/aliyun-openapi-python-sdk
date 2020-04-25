@@ -36,6 +36,12 @@ class GetInstanceConsoleOutputRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
+	def get_RemoveSymbols(self):
+		return self.get_query_params().get('RemoveSymbols')
+
+	def set_RemoveSymbols(self,RemoveSymbols):
+		self.add_query_param('RemoveSymbols',RemoveSymbols)
+
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
 

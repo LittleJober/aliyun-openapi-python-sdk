@@ -30,3 +30,10 @@ class GetRegionConfigurationRequest(RoaRequest):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+
+
+	def get_zoneId(self):
+		return self.get_query_params().get('zoneId')
+
+	def set_zoneId(self,zoneId):
+		self.add_query_param('zoneId',zoneId)

@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,17 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+from aliyunsdkrtc.endpoint import endpoint_data
+
 class StartMPUTaskRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'rtc', '2018-01-11', 'StartMPUTask','rtc')
+		if hasattr(self, "endpoint_map"):
+			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+		if hasattr(self, "endpoint_regional"):
+			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+
 
 	def get_UserPaness(self):
 		return self.get_query_params().get('UserPaness')
@@ -79,6 +86,14 @@ class StartMPUTaskRequest(RpcRequest):
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_SubSpecUserss(self):
+		return self.get_query_params().get('SubSpecUserss')
+
+	def set_SubSpecUserss(self,SubSpecUserss):
+		for i in range(len(SubSpecUserss)):	
+			if SubSpecUserss[i] is not None:
+				self.add_query_param('SubSpecUsers.' + str(i + 1) , SubSpecUserss[i]);
 
 	def get_AppId(self):
 		return self.get_query_params().get('AppId')

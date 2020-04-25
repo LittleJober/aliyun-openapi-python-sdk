@@ -23,8 +23,7 @@ from aliyunsdkcsb.endpoint import endpoint_data
 class FindServiceStatisticalDataRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'CSB', '2017-11-18', 'FindServiceStatisticalData','csb')
-		self.set_protocol_type('https')
+		RpcRequest.__init__(self, 'CSB', '2017-11-18', 'FindServiceStatisticalData')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
@@ -49,8 +48,8 @@ class FindServiceStatisticalDataRequest(RpcRequest):
 	def set_StartTime(self,StartTime):
 		self.add_query_param('StartTime',StartTime)
 
-	def get_ServiceName(self):
-		return self.get_query_params().get('ServiceName')
+	def get_ServiceNameVersion(self):
+		return self.get_query_params().get('ServiceNameVersion')
 
-	def set_ServiceName(self,ServiceName):
-		self.add_query_param('ServiceName',ServiceName)
+	def set_ServiceNameVersion(self,ServiceNameVersion):
+		self.add_query_param('ServiceNameVersion',ServiceNameVersion)
