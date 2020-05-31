@@ -23,7 +23,8 @@ from aliyunsdkehpc.endpoint import endpoint_data
 class AddNodesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'EHPC', '2018-04-12', 'AddNodes','ehs')
+		RpcRequest.__init__(self, 'EHPC', '2018-04-12', 'AddNodes')
+		self.set_method('GET')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
@@ -35,6 +36,18 @@ class AddNodesRequest(RpcRequest):
 
 	def set_ImageId(self,ImageId):
 		self.add_query_param('ImageId',ImageId)
+
+	def get_AllocatePublicAddress(self):
+		return self.get_query_params().get('AllocatePublicAddress')
+
+	def set_AllocatePublicAddress(self,AllocatePublicAddress):
+		self.add_query_param('AllocatePublicAddress',AllocatePublicAddress)
+
+	def get_InternetMaxBandWidthOut(self):
+		return self.get_query_params().get('InternetMaxBandWidthOut')
+
+	def set_InternetMaxBandWidthOut(self,InternetMaxBandWidthOut):
+		self.add_query_param('InternetMaxBandWidthOut',InternetMaxBandWidthOut)
 
 	def get_JobQueue(self):
 		return self.get_query_params().get('JobQueue')
@@ -144,6 +157,12 @@ class AddNodesRequest(RpcRequest):
 	def set_EcsChargeType(self,EcsChargeType):
 		self.add_query_param('EcsChargeType',EcsChargeType)
 
+	def get_InternetChargeType(self):
+		return self.get_query_params().get('InternetChargeType')
+
+	def set_InternetChargeType(self,InternetChargeType):
+		self.add_query_param('InternetChargeType',InternetChargeType)
+
 	def get_CreateMode(self):
 		return self.get_query_params().get('CreateMode')
 
@@ -155,3 +174,9 @@ class AddNodesRequest(RpcRequest):
 
 	def set_ZoneId(self,ZoneId):
 		self.add_query_param('ZoneId',ZoneId)
+
+	def get_InternetMaxBandWidthIn(self):
+		return self.get_query_params().get('InternetMaxBandWidthIn')
+
+	def set_InternetMaxBandWidthIn(self,InternetMaxBandWidthIn):
+		self.add_query_param('InternetMaxBandWidthIn',InternetMaxBandWidthIn)

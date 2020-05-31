@@ -23,7 +23,8 @@ from aliyunsdkehpc.endpoint import endpoint_data
 class ListInvocationResultsRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'EHPC', '2018-04-12', 'ListInvocationResults','ehs')
+		RpcRequest.__init__(self, 'EHPC', '2018-04-12', 'ListInvocationResults')
+		self.set_method('GET')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
@@ -33,11 +34,10 @@ class ListInvocationResultsRequest(RpcRequest):
 	def get_Instances(self):
 		return self.get_query_params().get('Instances')
 
-	def set_Instances(self,Instances):
-		for i in range(len(Instances)):	
-			if Instances[i].get('Id') is not None:
-				self.add_query_param('Instance.' + str(i + 1) + '.Id' , Instances[i].get('Id'))
-
+	def set_Instances(self, Instances):
+		for depth1 in range(len(Instances)):
+			if Instances[depth1].get('Id') is not None:
+				self.add_query_param('Instance.' + str(depth1 + 1) + '.Id', Instances[depth1].get('Id'))
 
 	def get_ClusterId(self):
 		return self.get_query_params().get('ClusterId')

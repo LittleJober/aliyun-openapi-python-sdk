@@ -24,6 +24,7 @@ class RestartInstanceRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'RestartInstance','redisa')
+		self.set_method('POST')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
@@ -35,6 +36,12 @@ class RestartInstanceRequest(RpcRequest):
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_UpgradeMinorVersion(self):
+		return self.get_query_params().get('UpgradeMinorVersion')
+
+	def set_UpgradeMinorVersion(self,UpgradeMinorVersion):
+		self.add_query_param('UpgradeMinorVersion',UpgradeMinorVersion)
 
 	def get_SecurityToken(self):
 		return self.get_query_params().get('SecurityToken')

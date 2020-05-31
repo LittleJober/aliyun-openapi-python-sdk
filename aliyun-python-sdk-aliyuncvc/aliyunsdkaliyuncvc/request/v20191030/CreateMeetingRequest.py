@@ -24,6 +24,7 @@ class CreateMeetingRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'aliyuncvc', '2019-10-30', 'CreateMeeting','aliyuncvc')
+		self.set_method('POST')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
@@ -41,3 +42,27 @@ class CreateMeetingRequest(RpcRequest):
 
 	def set_UserId(self,UserId):
 		self.add_body_params('UserId', UserId)
+
+	def get_OpenPasswordFlag(self):
+		return self.get_body_params().get('OpenPasswordFlag')
+
+	def set_OpenPasswordFlag(self,OpenPasswordFlag):
+		self.add_body_params('OpenPasswordFlag', OpenPasswordFlag)
+
+	def get_Password(self):
+		return self.get_body_params().get('Password')
+
+	def set_Password(self,Password):
+		self.add_body_params('Password', Password)
+
+	def get_MasterEnableFlag(self):
+		return self.get_body_params().get('MasterEnableFlag')
+
+	def set_MasterEnableFlag(self,MasterEnableFlag):
+		self.add_body_params('MasterEnableFlag', MasterEnableFlag)
+
+	def get_MeetingMode(self):
+		return self.get_body_params().get('MeetingMode')
+
+	def set_MeetingMode(self,MeetingMode):
+		self.add_body_params('MeetingMode', MeetingMode)

@@ -1,5 +1,6 @@
 # 阿里云开发者 Python 工具套件
 
+[![PyPI version](https://badge.fury.io/py/aliyun-python-sdk-core.svg)](https://badge.fury.io/py/aliyun-python-sdk-core)
 [![Build Status](https://travis-ci.org/aliyun/aliyun-openapi-python-sdk.svg?branch=master)](https://travis-ci.org/aliyun/aliyun-openapi-python-sdk)
 [![Build status](https://ci.appveyor.com/api/projects/status/ddq0kwqqbep9jasi/branch/master?svg=true)](https://ci.appveyor.com/project/aliyun/aliyun-openapi-python-sdk/branch/master)
 [![codecov](https://codecov.io/gh/aliyun/aliyun-openapi-python-sdk/branch/master/graph/badge.svg)](https://codecov.io/gh/aliyun/aliyun-openapi-python-sdk)
@@ -15,6 +16,15 @@
 <a href="https://api.aliyun.com" target="api_explorer">
   <img src="https://img.alicdn.com/tfs/TB12GX6zW6qK1RjSZFmXXX0PFXa-744-122.png" width="180" />
 </a>
+
+## 文档
+
+- [环境要求](./docs/0-Requirement-CN.md)
+- [安装](./docs/1-Installation-CN.md)
+- [客户端](./docs/2-Client-CN.md)
+- [超时机制](./docs/3-Timeout-CN.md)
+- [代理配置](./docs/4-Proxy-CN.md)
+- [日志](./docs/5-Log-CN.md)
 
 ## 环境准备
 

@@ -1,5 +1,6 @@
 # Alibaba Cloud Python Software Development Kit
 
+[![PyPI version](https://badge.fury.io/py/aliyun-python-sdk-core.svg)](https://badge.fury.io/py/aliyun-python-sdk-core)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6c81a06478ab41f7b1e803c0d4443c73)](https://app.codacy.com/app/aliyun/aliyun-openapi-python-sdk?utm_source=github.com&utm_medium=referral&utm_content=aliyun/aliyun-openapi-python-sdk&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/aliyun/aliyun-openapi-python-sdk.svg?branch=master)](https://travis-ci.org/aliyun/aliyun-openapi-python-sdk)
 [![Build status](https://ci.appveyor.com/api/projects/status/ddq0kwqqbep9jasi/branch/master?svg=true)](https://ci.appveyor.com/project/aliyun/aliyun-openapi-python-sdk/branch/master)
@@ -20,6 +21,14 @@ This document introduces how to obtain and call Alibaba Cloud Python SDK.
   <img src="https://img.alicdn.com/tfs/TB12GX6zW6qK1RjSZFmXXX0PFXa-744-122.png" width="180" />
 </a>
 
+## Documentation
+
+- [Requirements](docs/0-Requirement-EN.md)
+- [Installation](./docs/1-Installation-EN.md)
+- [Client](./docs/2-Client-EN.md)
+- [Timeout](./docs/3-Timeout-EN.md)
+- [Proxy Configurations](./docs/4-Proxy-EN.md)
+- [Log](./docs/5-Log-EN.md)
 
 ## Prerequisites
 

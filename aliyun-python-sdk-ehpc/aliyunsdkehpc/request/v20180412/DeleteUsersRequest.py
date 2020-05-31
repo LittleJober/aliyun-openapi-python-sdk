@@ -23,7 +23,8 @@ from aliyunsdkehpc.endpoint import endpoint_data
 class DeleteUsersRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'EHPC', '2018-04-12', 'DeleteUsers','ehs')
+		RpcRequest.__init__(self, 'EHPC', '2018-04-12', 'DeleteUsers')
+		self.set_method('GET')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
@@ -39,7 +40,7 @@ class DeleteUsersRequest(RpcRequest):
 	def get_Users(self):
 		return self.get_query_params().get('Users')
 
-	def set_Users(self,Users):
-		for i in range(len(Users)):	
-			if Users[i].get('Name') is not None:
-				self.add_query_param('User.' + str(i + 1) + '.Name' , Users[i].get('Name'))
+	def set_Users(self, Users):
+		for depth1 in range(len(Users)):
+			if Users[depth1].get('Name') is not None:
+				self.add_query_param('User.' + str(depth1 + 1) + '.Name', Users[depth1].get('Name'))

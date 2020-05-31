@@ -23,7 +23,8 @@ from aliyunsdkehpc.endpoint import endpoint_data
 class ListNodesNoPagingRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'EHPC', '2018-04-12', 'ListNodesNoPaging','ehs')
+		RpcRequest.__init__(self, 'EHPC', '2018-04-12', 'ListNodesNoPaging')
+		self.set_method('GET')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
@@ -41,6 +42,12 @@ class ListNodesNoPagingRequest(RpcRequest):
 
 	def set_ClusterId(self,ClusterId):
 		self.add_query_param('ClusterId',ClusterId)
+
+	def get_Sequence(self):
+		return self.get_query_params().get('Sequence')
+
+	def set_Sequence(self,Sequence):
+		self.add_query_param('Sequence',Sequence)
 
 	def get_HostName(self):
 		return self.get_query_params().get('HostName')
