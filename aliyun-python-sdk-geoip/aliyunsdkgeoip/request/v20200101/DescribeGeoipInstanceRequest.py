@@ -23,6 +23,7 @@ class DescribeGeoipInstanceRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'geoip', '2020-01-01', 'DescribeGeoipInstance','geoip')
+		self.set_method('POST')
 
 	def get_InstanceId(self):
 		return self.get_query_params().get('InstanceId')
